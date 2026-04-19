@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogeshwari Natural Farm Products - Vedant Yadav</title>
+    <meta name="description" content="Fresh, natural farm products direct from Jogeshwari Natural Farm - Arvi, Koregaon, Satara. Contact Vedant Yadav for pricing.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafbf8;
+            color: #2c3e2d;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header .farm-name {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            letter-spacing: 1px;
+        }
+
+        header .farmer-info {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        header .address {
+            font-size: 0.9rem;
+            margin-top: 6px;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+
+        /* Navigation banner */
+        .info-banner {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 18px 20px;
+            margin: 25px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #664d03;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1b5e20;
+            margin: 40px 0 15px;
+            padding: 0 20px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+            padding: 0 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Product Grid */
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0f0f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #999;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-size: 1.35rem;
+            color: #1b5e20;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-model {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 12px;
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 16px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: #d32f2f;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 11px 14px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-contact {
+            background-color: #1b5e20;
+            color: white;
+            flex: 1;
+        }
+
+        .btn-contact:hover {
+            background-color: #0d3818;
+            box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+        }
+
+        /* Hero Section */
+        .hero-intro {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-intro h2 {
+            color: #1b5e20;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-intro p {
+            color: #555;
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-details {
+            font-size: 1rem;
+            margin: 12px 0;
+            opacity: 0.95;
+        }
+
+        .contact-details a {
+            color: #fff59d;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-details a:hover {
+            color: #ffffff;
+        }
+
+        .contact-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-buttons .btn {
+            min-width: 180px;
+            padding: 13px 25px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d3818;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 6px 0;
+            opacity: 0.9;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header .farm-name {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .products-container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .product-image {
+                height: 200px;
+            }
+
+            .hero-intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🌿 Jogeshwari Natural Farm Products</h1>
+        <div class="farm-name">Fresh • Natural • Farm-Direct</div>
+        <div class="farmer-info">Farmer: <strong>Vedant Yadav</strong></div>
+        <div class="address">At/Post - Arvi, Tal - Koregaon, Dist - Satara, Maharashtra - 415116</div>
+        <div class="address">Contact: <strong>+91 7666150726</strong></div>
+    </header>
+
+    <!-- INFO BANNER -->
+    <div class="info-banner">
+        <strong>⚡ Note:</strong> All products are farm-fresh and priced on inquiry. Call or WhatsApp Vedant Yadav directly for pricing and bulk orders.
+    </div>
+
+    <!-- HERO INTRO -->
+    <div class="hero-intro">
+        <h2>Welcome to Our Natural Farm</h2>
+        <p>We grow fresh, healthy produce using traditional farming methods. All products are harvested at peak freshness and delivered directly from our farm to you. Bulk orders and wholesale inquiries welcome!</p>
+    </div>
+
+    <!-- PRODUCTS -->
+    <h2 class="section-title">Our Premium Products</h2>
+    <p class="section-subtitle">Select any product to contact the farmer directly for pricing and orders</p>
+
+    <div class="products-container">
+
+        <!-- Banana -->
+        <div class="product-card">
+            <div class="product-image"><img src="banana.jpg" alt="Fresh Bananas"></div>
+            <div class="product-info">
+                <div class="product-name">Banana</div>
+                <div class="product-model">BAN001</div>
+                <div class="product-desc">Naturally grown, sweet bananas harvested at peak ripeness from our farm. Rich in potassium and natural nutrients.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Onion -->
+        <div class="product-card">
+            <div class="product-image"><img src="onion.jpg" alt="Fresh Onions"></div>
+            <div class="product-info">
+                <div class="product-name">Onion</div>
+                <div class="product-model">ONG002</div>
+                <div class="product-desc">Farm-fresh golden onions available in bulk and retail quantities. Long shelf life and premium quality for commercial and household use.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ginger -->
+        <div class="product-card">
+            <div class="product-image"><img src="Ginger.jpg" alt="Fresh Ginger"></div>
+            <div class="product-info">
+                <div class="product-name">Ginger</div>
+                <div class="product-model">GIN003</div>
+                <div class="product-desc">Organic ginger grown without chemical fertilizers. Known for its natural healing properties, great for cooking and wellness.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mushroom -->
+        <div class="product-card">
+            <div class="product-image"><img src="mushrooms.webp" alt="Fresh Mushrooms"></div>
+            <div class="product-info">
+                <div class="product-name">Mushroom</div>
+                <div class="product-model">MSH004</div>
+                <div class="product-desc">Freshly harvested mushrooms cultivated in clean, natural conditions. Perfect for daily cooking and a great source of nutrients.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Potato -->
+        <div class="product-card">
+            <div class="product-image"><img src="potato.jpg" alt="Fresh Potatoes"></div>
+            <div class="product-info">
+                <div class="product-name">Potato</div>
+                <div class="product-model">POT005</div>
+                <div class="product-desc">High-quality potatoes sourced directly from our farm. Suitable for all cooking methods and long shelf life for storage.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indian Chilli -->
+        <div class="product-card">
+            <div class="product-image"><img src="chillies.webp" alt="Fresh Indian Chillies"></div>
+            <div class="product-info">
+                <div class="product-name">Indian Chilli</div>
+                <div class="product-model">CHL006</div>
+                <div class="product-desc">Spicy, farm-grown Indian chillies available fresh green or red. Essential for authentic Indian cooking with authentic heat.</div>
+                <div class="price-note">📱 Contact: +91 7666150726</div>
+                <div class="btn-group">
+                    <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <h2>Contact the Farmer Directly</h2>
+        <div class="contact-details"><strong>Vedant Yadav</strong> — Jogeshwari Natural Farm Products</div>
+        <div class="contact-details">📍 At/Post - Arvi, Tal - Koregaon, Dist - Satara, Maharashtra - 415116</div>
+        <div class="contact-details">📱 Phone: <a href="tel:+917666150726">+91 7666150726</a></div>
+
+        <div class="contact-buttons">
+            <a class="btn btn-contact" href="tel:+917666150726">📞 Call Vedant - +91 7666150726</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Jogeshwari Natural Farm Products — Vedant Yadav</p>
+        <p>All products are naturally grown. Prices are discussed and agreed upon directly with the farmer.</p>
+        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Supporting sustainable farming and natural agriculture 🌱</p>
+    </footer>
+
+</body>
+</html>
